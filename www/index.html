@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  
+  <!--javascript-->
+  <script src="components/loader.js"></script>
+  <script src="lib/jquery-3.5.1.min.js"></script>
+  <script src="components/acao.js"></script>
+
+  <!--css-->
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <div class="container">
+    <!-- titulo -->
+    <div class="row">
+      <div class="col-12">
+        <div class="p-3 mb-2 bg-primary text-white">
+          <h2><center>Cálculo do Metabolismo Basal</center></h2>
+        </div>
+      </div>
+    </div>
+    
+    <!-- inicio do formulario -->
+    <form id="formulario">
+      <!-- atividade -->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="atividade">Selecione seu nível de atividade física:</label><br>
+               <select class="form-control" id="atividade">
+                  <option value="1.2" id="sedentario">Sedentário</option>
+                  <option value="1.375" id="levemente">Levemente ativo</option>
+                  <option value="1.55" id="moderadamente">Moderadamente ativo</option>
+                  <option value="1.725" id="altamente">Altamente ativo</option>
+                  <option value="1.9" id="extremamente">Extremamente ativo</option>
+               </select>
+          </div>
+        </div>
+      </div>
+      <!-- Informações -->
+      <div class="row">
+        <div class="col-12">
+          <div class="p-3 mb-2 bg-primary text-white">
+            <h5><center>Informações Pessoais</center></h5>
+          </div>
+        </div>
+     </div>
+      <!-- sexo -->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="sexo">Digite seu gênero:</label>
+            <select class="form-control" id="sexo">
+              <option value="m">Masculino</option>
+              <option value="f">Feminino</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- idade -->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" class="form-control" id="idade" required/>
+          </div>
+        </div>
+      </div>
+      <!-- peso -->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="peso">Digite seu peso(kg):</label>
+            <input type="number" class="form-control" id="peso" required/>
+          </div>
+        </div>
+      </div>
+      <!-- altura -->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="altura">Digite sua altura(cm):</label>
+            <input type="number" class="form-control" id="altura" required/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- calcular -->
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" id="calcular">Calcular</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <!-- resultado -->
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="">Resultado:</label>
+          <input type="text" class="form-control" id="resultado" readonly>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
