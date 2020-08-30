@@ -6,7 +6,6 @@ $(document).on("click", "#calcular", function() {
   var peso = $("#peso").val();
   var idade = $("#idade").val();
   var altura = $("#altura").val();
-
   var sedentario = $("#sedentario").val();
   var levemente = $("#levemente").val();
   var moderadamente = $("#moderadamente").val();
@@ -47,5 +46,6 @@ $(document).on("click", "#calcular", function() {
     resultado = extremamente * (655 + (9.6 * peso)) + ((1.8 * altura) - (4.7 * idade));
   }
 
-  $("#resultado").val(resultado);
+    $("#resultado").val(resultado);
+    //alert("Você necessita de: " + resultado + " calorias");
 });
